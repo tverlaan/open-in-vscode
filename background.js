@@ -1,3 +1,21 @@
+chrome.runtime.onInstalled.addListener(function() {
+  chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
+    chrome.declarativeContent.onPageChanged.addRules([
+      {
+        conditions: [
+          new chrome.declarativeContent.PageStateMatcher({
+            pageUrl: { hostSuffix: 'atlassian.net' },
+          }),
+          new chrome.declarativeContent.PageStateMatcher({
+            pageUrl: { hostEquals: 'bitbucket.org' },
+          })
+        ],
+        actions: [ new chrome.declarativeContent.ShowPageAction() ]
+      }
+    ])
+  })
+})
+
 chrome.pageAction.onClicked.addListener(tab => {
   let url = new URL(tab.url)
   let domain = url.hostname.split('.').slice(-2).join('.')
@@ -9,7 +27,6 @@ chrome.pageAction.onClicked.addListener(tab => {
       path = url.pathname.split('/').slice(1)
       if (path[0] === 'account' || path[0] === 'dashboard' || path.length < 2) return;
 
-      console.log(path)
       if (path.length >= 4 && path[2] === 'pull-requests' && path[3].match(/[0-9]+/) !== null) {
         vscode += 'atlassian.atlascode/openPullRequest?q=' + encodeURIComponent(url.href)
       } else {
