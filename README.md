@@ -7,7 +7,7 @@ Chrome browser extension that adds a button to navigate from Jira/Bitbucket to V
 ## Features
 
   * Opens Bitbucket PR in VS Code
-  * Opens the project in VS code on all other Bitbucket pages
+  * Opens (when in recents) or clones the project in VS code on all other Bitbucket pages
   * Opens "start work" in VS code, from there easily click on the ticket
   * Directly opening related Jira is [pending](https://bitbucket.org/atlassianlabs/atlascode/pull-requests/965)
 
