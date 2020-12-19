@@ -31,7 +31,7 @@ chrome.pageAction.onClicked.addListener(tab => {
         vscode += 'atlassian.atlascode/openPullRequest?q=' + encodeURIComponent(url.href)
       } else {
         let clonePath = path.slice(0, 2).join('/')
-        vscode += 'vscode.git/clone?url=' + encodeURIComponent("ssh://git@" + url.hostname) + '/' + clonePath
+        vscode += 'timmoverlaan.uri-open-recent/open-or-clone?url=' + encodeURIComponent("ssh://git@" + url.hostname) + '/' + clonePath
       }
       
       break;

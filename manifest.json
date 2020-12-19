@@ -1,6 +1,6 @@
 {
   "name": "Atlassian to VS Code",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Chrome browser extension that adds a button to navigate from Jira and Bitbucket to VS Code",
   "manifest_version": 2,
   "author": "Timmo Verlaan",
