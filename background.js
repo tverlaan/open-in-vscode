@@ -17,8 +17,8 @@ chrome.runtime.onInstalled.addListener(function() {
 })
 
 chrome.pageAction.onClicked.addListener(tab => {
-  let url = new URL(tab.url)
-  let domain = url.hostname.split('.').slice(-2).join('.')
+  const url = new URL(tab.url)
+  const domain = url.hostname.split('.').slice(-2).join('.')
 
   // add support for insiders via config
   let vscode = 'vscode://'
@@ -30,13 +30,14 @@ chrome.pageAction.onClicked.addListener(tab => {
       if (path.length >= 4 && path[2] === 'pull-requests' && path[3].match(/[0-9]+/) !== null) {
         vscode += 'atlassian.atlascode/openPullRequest?q=' + encodeURIComponent(url.href)
       } else {
-        let clonePath = path.slice(0, 2).join('/')
-        vscode += 'timmoverlaan.uri-open-recent/open-or-clone?url=' + encodeURIComponent("ssh://git@" + url.hostname) + '/' + clonePath
+        const project = path[1]
+        const clonePath = path.slice(0, 2).join('/')
+        vscode += 'timmoverlaan.uri-open-recent/open-or-clone?project=' + project + '&url=' + encodeURIComponent("ssh://git@" + url.hostname) + '/' + clonePath
       }
       
       break;
     case 'atlassian.net':
-      let issueMatch = url.pathname.match(/[A-Z]{2,}-[0-9]+/)
+      const issueMatch = url.pathname.match(/[A-Z]{2,}-[0-9]+/)
       if (issueMatch) {
         vscode += 'atlassian.atlascode/startWorkOnJiraIssue?issueKey=' + issueMatch[0] + '&site=' + url.hostname
       }
