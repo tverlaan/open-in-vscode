@@ -1,22 +1,24 @@
 {
-  "name": "Atlassian to VS Code",
-  "version": "0.4.0",
-  "description": "Chrome browser extension that adds a button to navigate from Jira and Bitbucket to VS Code",
+  "name": "Open in VS Code",
+  "version": "0.5.0",
+  "description": "Add a button to navigate from Github, Gitlab, Bitbucket and Jira to VS Code in a single click",
   "manifest_version": 2,
   "author": "Timmo Verlaan",
-  "homepage_url": "https://github.com/tverlaan/atlas-to-vscode",
+  "homepage_url": "https://github.com/tverlaan/open-in-vscode",
   "page_action": {
     "default_icon": {
-      "16": "images/icon_atlas_vscode_16.png",
-      "24": "images/icon_atlas_vscode_24.png",
-      "32": "images/icon_atlas_vscode_32.png"
+      "16": "images/icon_open_vscode_16.png",
+      "24": "images/icon_open_vscode_24.png",
+      "32": "images/icon_open_vscode_32.png"
     },
-    "default_title": "Atlas to VS Code"
+    "default_title": "Open in VS Code"
   },
   "permissions": [
     "declarativeContent",
     "https://bitbucket.org/",
-    "https://*.atlassian.net/"
+    "https://*.atlassian.net/",
+    "https://github.com/",
+    "https://gitlab.com/"
   ],
   "background": {
     "scripts": [
@@ -25,12 +27,12 @@
     "persistent": false
   },
   "icons": {
-    "16": "images/icon_atlas_vscode_16.png",
-    "48": "images/icon_atlas_vscode_48.png",
-    "128": "images/icon_atlas_vscode_128.png"
+    "16": "images/icon_open_vscode_16.png",
+    "48": "images/icon_open_vscode_48.png",
+    "128": "images/icon_open_vscode_128.png"
   },
   "commands": {
-    "_execute_browser_action": {
+    "_execute_page_action": {
       "suggested_key": {
         "windows": "Ctrl+Shift+O",
         "mac": "Command+Shift+O",
