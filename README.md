@@ -1,5 +1,7 @@
 # Atlassion to VS Code
 
+**DEPRECATED, PLEASE SWITCH TO [Open in VS Code](https://chrome.google.com/webstore/detail/open-in-vs-code/kcplfgklelmfcockoimjkdgnlkbfgkjf)**
+
 [![Atlassian to VS Code in chrome store](https://img.shields.io/chrome-web-store/v/addmboihofpaognchiciamhmfdmfbipd)](https://chrome.google.com/webstore/detail/atlassian-to-vs-code/addmboihofpaognchiciamhmfdmfbipd)
 
 Chrome browser extension that adds a button to navigate from Jira/Bitbucket to VS Code with a single click.
