@@ -64,7 +64,7 @@ function handleBitbucket(url) {
 function handleJira(url) {
   const issueMatch = url.pathname.match(/[A-Z]{2,}-[0-9]+/)
   if (issueMatch) {
-    return `${ide()}://atlassian.atlascode/startWorkOnJiraIssue?issueKey=${issueMatch[0]}&site=${url.hostname}`
+    return `${ide()}://atlassian.atlascode/showJiraIssue?issueKey=${issueMatch[0]}&site=${url.hostname}`
   }
   return false
 }
@@ -75,7 +75,7 @@ function handleOpenOrClone(url) {
   if (path[0] !== undefined && path[1] !== undefined) {
     const org = path[0]
     const project = path[1]
-    const cloneUrl = encodeURIComponent(`ssh://git@${url.hostname}:${org}/${project}`)
+    const cloneUrl = encodeURIComponent(`git@${url.hostname}:${org}/${project}`)
     return `${ide()}://timmoverlaan.uri-open-recent/open-or-clone?project=${project}&url=${cloneUrl}`
   }
   return false

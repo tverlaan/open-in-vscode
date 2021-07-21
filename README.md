@@ -8,8 +8,7 @@ Add a simple button to navigate from Github, Gitlab, Bitbucket and Jira to VS Co
 
   * Open or clone the project in VS code on Github, Gitlab & Bitbucket
   * Open Bitbucket PR in VS code when viewing a specific PR
-  * Open "start work on Jira issue" in VS code (from there easily open the ticket)
-  * Directly opening Jira issue is [pending](https://bitbucket.org/atlassianlabs/atlascode/pull-requests/965)
+  * Open Jira issue in VS code
 
 ## Requirements
 
@@ -23,7 +22,7 @@ You need the following plugins in VS Code.
   * Opening: vscode://timmoverlaan.uri-open-recent/open-or-clone?project=open-in-vscode&url=https%3A%2F%2Fgithub.com%2Ftverlaan%2Fopen-in-vscode.git
   * Cloning: vscode://vscode.git/clone?url=foobar
   * Open PR: vscode://atlassian.atlascode/openPullRequest?q=https%3A%2F%2Fbitbucket.org%2Fcompany%2Fproject%2Fpull-requests%2F123
-  * Starting work on Jira: vscode://atlassian.atlascode/startWorkOnJiraIssue?issueKey=ABC-123&site=company.atlassian.net
+  * Show Jira issue: vscode://atlassian.atlascode/showJiraIssue?issueKey=ABC-123&site=company.atlassian.net
 
 ## Documentation
 

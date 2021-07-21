@@ -1,6 +1,6 @@
 {
   "name": "Open in VS Code",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Add a button to navigate from Github, Gitlab, Bitbucket and Jira to VS Code in a single click",
   "manifest_version": 2,
   "author": "Timmo Verlaan",
